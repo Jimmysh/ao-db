@@ -1,7 +1,7 @@
 {
   "name": "ao-db",
   "scripts": {
-    "preinstall": "lerna run link && yarn link ao-db-core ao-db-node",
+    "link.lib": "lerna run link && yarn link ao-db-core ao-db-node",
     "build.core": "lerna run build --scope ao-db-core && lerna run build --scope ao-db-node",
     "build.all": "lerna run build --ignore ao-db-core --ignore ao-db-node",
     "build": "yarn run build.core && yarn run build.all"
@@ -72,8 +72,9 @@
     "tslib": "^1.6.0",
     "tslint": "^5.0.0",
     "tslint-config-standard": "^6.0.1",
+    "tslint-ionic-rules": "^0.0.11",
     "typedoc": "^0.7.1",
-    "typescript": "~2.4.1",
+    "typescript": "~2.3.0",
     "uglify-js": "^3.0.23",
     "webpack": "^3.0.0",
     "yargs": "8.0.2",

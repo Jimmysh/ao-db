@@ -1,6 +1,6 @@
 import { ICollectionOptions } from 'ao-db-core';
 
-export interface IEnvionment {
+export interface IEnvionmentModel {
   key: string;
   value: any;
 }
