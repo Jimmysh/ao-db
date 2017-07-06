@@ -14,7 +14,7 @@ export default {
   dest: './build/bundles/ao-db-ngrx.umd.js',
   format: 'umd',
   exports: 'named',
-  moduleName: 'ng.ao.db.ngrx',
+  moduleName: 'AoDBNgrx',
   plugins: [resolve()],
   external: Object.keys(globals),
   globals: globals,

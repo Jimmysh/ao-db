@@ -1,1 +1,1 @@
-type Blob = any
+export * from './envionment';

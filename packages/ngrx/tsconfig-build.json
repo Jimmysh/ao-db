@@ -25,6 +25,6 @@
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "ao-db-ngrx"
+    "flatModuleId": "AODBNgrx"
   }
 }

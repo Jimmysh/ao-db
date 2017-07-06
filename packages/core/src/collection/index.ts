@@ -31,7 +31,7 @@ export class CollectionPlugin {
                 type: 'string'
               }
             }
-            const relationConf = {
+            const relationConf: ICollectionOptions = {
               id,
               local: {
                 name: tableName

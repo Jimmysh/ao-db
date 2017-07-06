@@ -1,28 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "build",
-    "rootDir": "src",
+    "strict": true,
+    "module": "commonjs",
     "moduleResolution": "node",
-    "module": "es2015",
-    "declaration": true,
-    "importHelpers": true,
-    "inlineSourceMap": true,
-    "listFiles": false,
-    "traceResolution": false,
-    "pretty": true,
-    "lib": ["es6", "es2015"],
-    "types": [
-      "node"
+    "rootDir": ".",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": [
+      "es2015",
+      "dom"
     ],
-    "baseUrl": "."
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
   },
-  "include": [
-    "src/**/*.ts"
-  ],
   "exclude": [
-    "node_modules/**"
-  ],
-  "compileOnSave": false
+    "node_modules"
+  ]
 }

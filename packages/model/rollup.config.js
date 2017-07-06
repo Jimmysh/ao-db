@@ -10,11 +10,11 @@ const globals = {
 };
 
 export default {
-  entry: './build/modules/ao-db-service.es5.js',
-  dest: './build/bundles/ao-db-service.umd.js',
+  entry: './build/modules/ao-db-model.es5.js',
+  dest: './build/bundles/ao-db-model.umd.js',
   format: 'umd',
   exports: 'named',
-  moduleName: 'AoDBService',
+  moduleName: 'AoDBModel',
   plugins: [resolve()],
   external: Object.keys(globals),
   globals: globals,

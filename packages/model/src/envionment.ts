@@ -8,9 +8,9 @@ export interface IEnvionment {
 export const EnvionmentConfig: ICollectionOptions = {
   id: '_envionment',
   local: {
+    auto_compaction: true,
     name: 'envionment',
-    revs_limit: 1,
-    auto_compaction: true
+    revs_limit: 1
   },
   model: {
     key: {

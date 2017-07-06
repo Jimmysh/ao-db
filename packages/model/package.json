@@ -1,10 +1,16 @@
 {
   "name": "ao-db-model",
   "version": "0.0.1",
-  "main": "build/index.js",
-  "typings": "build/index.d.ts",
+  "main": "./bundles/ao-db-model.umd.js",
+  "module": "./modules/ao-db-model.es5.js",
+  "es2015": "./modules/ao-db-model.js",
+  "typings": "./index.d.ts",
   "scripts": {
-    "build": "trash build && tsc",
-    "link": "yarn link"
-  }
+    "build": "node ./build.js",
+    "link": "cd build && yarn link"
+  },
+  "dependencies": {
+    "ao-db-core": "file:../ao-db-core"
+  },
+  "devDependencies": {}
 }
