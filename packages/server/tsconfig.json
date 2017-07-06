@@ -1,5 +1,5 @@
 {
-  "extends": "./config/tsconfig.flexible", // also available: "./config/tsconfig.strict"
+  "extends": "./config/tsconfig.flexible",
   "compilerOptions": {
     "target": "es2015",
     "experimentalDecorators": true,
@@ -17,9 +17,9 @@
     "types": [
       "node"
     ],
-    "baseUrl": ".", // required for "paths"
+    "baseUrl": ".",
     "paths": {
-      "ao-db-server": ["src/index.ts"] // write tests without relative paths
+      "ao-db-server": ["src/index.ts"]
     }
   },
   "include": [
