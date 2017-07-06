@@ -91,7 +91,6 @@
     "standard-version": "^4.0.0",
     "trash-cli": "^1.4.0",
     "tslint": "^5.0.0",
-    "tslint-config-standard": "^6.0.1",
     "typedoc": "^0.7.1",
     "typescript": "~2.4.1"
   }

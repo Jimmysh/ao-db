@@ -84,7 +84,6 @@
     "ts-loader": "^2.1.0",
     "tslib": "^1.6.0",
     "tslint": "^5.0.0",
-    "tslint-config-standard": "^6.0.1",
     "tslint-ionic-rules": "^0.0.11",
     "typedoc": "^0.7.1",
     "typescript": "~2.3.0",
