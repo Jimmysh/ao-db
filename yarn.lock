@@ -4466,7 +4466,7 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lerna@^2.0.0-rc.5:
+lerna@2.0.0-rc.5:
   version "2.0.0-rc.5"
   resolved "http://registry.npm.taobao.org/lerna/download/lerna-2.0.0-rc.5.tgz#b59d168caaac6e3443078c1bce194208c9aa3090"
   dependencies:
@@ -7823,13 +7823,7 @@ tslib@^1.0.0, tslib@^1.6.0, tslib@^1.7.1:
   version "1.7.1"
   resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.7.1.tgz#bc8004164691923a79fe8378bbeb3da2017538ec"
 
-tslint-config-standard@^6.0.1:
-  version "6.0.1"
-  resolved "http://registry.npm.taobao.org/tslint-config-standard/download/tslint-config-standard-6.0.1.tgz#a04ba0a794759e877287056f549b081e47a56d6c"
-  dependencies:
-    tslint-eslint-rules "^4.0.0"
-
-tslint-eslint-rules@^4.0.0, tslint-eslint-rules@^4.1.1:
+tslint-eslint-rules@^4.1.1:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/tslint-eslint-rules/download/tslint-eslint-rules-4.1.1.tgz#7c30e7882f26bc276bff91d2384975c69daf88ba"
   dependencies:
