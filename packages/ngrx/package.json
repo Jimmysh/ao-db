@@ -7,7 +7,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "build": "node ./build.js",
-    "link": "cd build && yarn link",
+    "link": "cd ./build && yarn link",
     "test": "karma start",
     "pack-lib": "npm pack ./build",
     "publish-lib": "npm publish ./build",

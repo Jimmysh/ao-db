@@ -7,7 +7,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "build": "node ./build.js",
-    "link": "cd build && yarn link"
+    "link": "cd ./build && yarn link"
   },
   "dependencies": {
     "ao-db-core": "file:../ao-db-core"
