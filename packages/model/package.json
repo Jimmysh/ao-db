@@ -7,7 +7,8 @@
   "typings": "./index.d.ts",
   "scripts": {
     "build": "node ./build.js",
-    "link": "cd ./build && yarn link"
+    "link": "cd ./build && yarn link",
+    "lint": "tslint ./src/**/*{!.spec,!.d}.ts"
   },
   "dependencies": {
     "ao-db-core": "file:../ao-db-core"

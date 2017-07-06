@@ -8,6 +8,7 @@
   "scripts": {
     "build": "node ./build.js",
     "link": "cd ./build && yarn link",
+    "lint": "tslint ./src/**/*{!.spec,!.d}.ts",
     "test": "karma start",
     "pack-lib": "npm pack ./build",
     "publish-lib": "npm publish ./build",

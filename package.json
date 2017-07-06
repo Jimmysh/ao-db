@@ -1,7 +1,9 @@
 {
   "name": "ao-db",
   "scripts": {
-    "link.lib": "yarn link ao-db-core ao-db-node ao-db-model ao-db-ngrx",
+    "l": "lerna run link && yarn link.lib",
+    "lint": "lerna run lint",
+    "link.lib": "yarn link ao-db-core ao-db-node ao-db-model ao-db-ngrx ao-db-service",
     "build.1": "lerna run build --scope *core && lerna run build --scope *node",
     "build.2": "lerna run build --scope *model --scope *ngrx",
     "build.3": "lerna run build --scope *server --scope *service",
