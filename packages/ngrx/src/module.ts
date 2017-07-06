@@ -14,10 +14,10 @@ import { StoreModule } from '@ngrx/store';
     EffectsModule.run(DBEffects),
   ]
 })
-export class RxAoDBModule {
+export class AoDBNgrxModule {
   public static forRoot(db: any): ModuleWithProviders {
     return {
-      ngModule: RxAoDBModule,
+      ngModule: AoDBNgrxModule,
       providers: [
         { provide: Database, useExisting: db },
         DBEffects,

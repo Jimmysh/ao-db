@@ -1,3 +1,6 @@
-// Public classes.
-export { SumService } from './services/sum.service';
-export { ArithmeticModule } from './modules/arithmetic.module';
+/// <reference types='pouchdb-adapter-idb' />
+/// <reference types='pouchdb-adapter-websql' />
+
+export { AoDBService } from './ao-db-service';
+export { AoDBServiceModule } from './module';
+export * from './models';

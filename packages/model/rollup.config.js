@@ -1,12 +1,13 @@
+import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 
 // Add here external dependencies that actually you use.
 const globals = {
   '@angular/core': 'ng.core',
   '@angular/common': 'ng.common',
-  'rxjs/Observable': 'Rx',
-  'rxjs/Observer': 'Rx',
-  'rxjs/add/operator/map': 'Rx'
+  'immutable': 'immutable',
+  "lodash": 'lodash',
+  "lodash/index": 'lodash'
 };
 
 export default {
@@ -15,7 +16,13 @@ export default {
   format: 'umd',
   exports: 'named',
   moduleName: 'AoDBModel',
-  plugins: [resolve()],
+  plugins: [
+    resolve({
+      jsnext: true,
+      main: true
+    }),
+    commonjs()
+  ],
   external: Object.keys(globals),
   globals: globals,
   onwarn: () => {

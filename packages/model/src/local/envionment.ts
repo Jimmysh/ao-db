@@ -5,7 +5,7 @@ export interface IEnvionmentModel {
   value: any;
 }
 
-export const EnvionmentConfig: ICollectionOptions = {
+export const envionmentConfig: ICollectionOptions = {
   id: '_envionment',
   local: {
     auto_compaction: true,
