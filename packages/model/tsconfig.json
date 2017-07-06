@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "experimentalDecorators": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "module": "es2015",
+    "declaration": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "listFiles": false,
+    "traceResolution": false,
+    "pretty": true,
+    "lib": ["es6", "es2015"],
+    "types": [
+      "node"
+    ],
+    "baseUrl": "."
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ],
+  "compileOnSave": false
+}

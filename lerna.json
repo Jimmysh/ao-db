@@ -1,0 +1,13 @@
+{
+  "lerna": "2.0.0-rc.5",
+  "npmClient": "yarn",
+  "packages": [
+    "packages/*"
+  ],
+  "commands": {
+    "bootstrap": {
+      "ignore": "packages/*"
+    }
+  },
+  "version": "0.0.0"
+}
