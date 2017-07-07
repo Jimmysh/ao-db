@@ -91,6 +91,7 @@ export class Collection<T = any> {
         break;
     }
     this.relationModel = pickBy(config.model!, (v, key) => v.collection || v.model) as any;
+    this.syncOptions = get(this.config, 'sync.options');
   }
 
   // 写入
