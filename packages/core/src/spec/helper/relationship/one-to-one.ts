@@ -1,4 +1,4 @@
-import { ICollectionOptions, SyncType } from 'ao-db-core'
+import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 /**
  * 一个用户有一个配置文件, 这个配置文件也只有一个用户
@@ -25,7 +25,7 @@ export const user: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const userProfile: ICollectionOptions = {
   id: 'oneToOne.profile',
@@ -48,7 +48,7 @@ export const userProfile: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 //  user view 数据
 const userViewDemo = {
@@ -57,4 +57,4 @@ const userViewDemo = {
   profile: {
     name: 'bbb'
   }
-}
+};

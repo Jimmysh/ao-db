@@ -1,9 +1,9 @@
-import * as relationship from './relationship'
-import * as sync from './sync'
+import * as relationship from './relationship';
+import * as sync from './sync';
 
-import { AoDB, IAoDBOptions } from 'ao-db-core'
+import { AoDB, IAoDBOptions } from 'ao-db-core';
 
-import { host } from './global'
+import { host } from './global';
 
 const conf: IAoDBOptions = {
   host,
@@ -23,12 +23,12 @@ const conf: IAoDBOptions = {
     relationship.multi.key,
     relationship.multi.man
   ]
-}
+};
 
-const DB = new AoDB(conf)
+const DB = new AoDB(conf);
 
 export {
   DB,
   sync,
   relationship
-}
+};

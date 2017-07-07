@@ -1,4 +1,4 @@
-import { ICollectionOptions, SyncType } from 'ao-db-core'
+import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 /**
  * 一个用户有一个外链的配置文件, 这个配置文件可链接多个人
@@ -26,7 +26,7 @@ export const user: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const userProfile: ICollectionOptions = {
   id: 'oneToOneLink.profile',
@@ -46,11 +46,11 @@ export const userProfile: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 //  user view 数据
 const userViewDemo = {
   _id: 'xx',
   name: 'xx',
   profile: 'id'
-}
+};

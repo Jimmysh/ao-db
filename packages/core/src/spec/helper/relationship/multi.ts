@@ -1,4 +1,4 @@
-import { ICollectionOptions, SyncType } from 'ao-db-core'
+import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 /**
  * oneToMany: 男人有多个汽车
@@ -35,7 +35,7 @@ export const man: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const car: ICollectionOptions = {
   id: 'multi.car',
@@ -65,7 +65,7 @@ export const car: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const brand: ICollectionOptions = {
   id: 'multi.brand',
@@ -89,7 +89,7 @@ export const brand: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const key: ICollectionOptions = {
   id: 'multi.key',
@@ -116,7 +116,7 @@ export const key: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const certificate: ICollectionOptions = {
   id: 'multi.certificate',
@@ -136,7 +136,7 @@ export const certificate: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 //  man view 数据
 const manViewDemo = {
@@ -164,4 +164,4 @@ const manViewDemo = {
       }
     }
   }
-}
+};

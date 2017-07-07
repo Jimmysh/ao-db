@@ -1,4 +1,4 @@
-import { ICollectionOptions, SyncType } from 'ao-db-core'
+import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 /**
  * 一个出租车有多名司机, 一个司机也能开多个出租车
@@ -27,7 +27,7 @@ export const driver: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const taxi: ICollectionOptions = {
   id: 'manyToMany.taxi',
@@ -52,11 +52,11 @@ export const taxi: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 //  driver view 数据
 const driverViewDemo = {
   _id: 'xx',
   name: 'xx',
   taxis: ['a', 'b']
-}
+};

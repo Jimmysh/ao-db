@@ -1,4 +1,4 @@
-import { ICollectionOptions, SyncType } from 'ao-db-core'
+import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 /**
  * 一个客户有多个支付方式
@@ -27,7 +27,7 @@ export const customer: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 export const payment: ICollectionOptions = {
   id: 'oneToMany.payment',
@@ -50,7 +50,7 @@ export const payment: ICollectionOptions = {
     options: {
     }
   }
-}
+};
 
 //  customer view 数据
 const customerViewDemo = {
@@ -69,4 +69,4 @@ const customerViewDemo = {
       }
     }
   }
-}
+};
