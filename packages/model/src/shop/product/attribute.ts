@@ -2,6 +2,8 @@ import * as product from './product';
 
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
+import { IProductAttributeValueModel } from './attribute.value';
+
 export interface IProductAttributeModel {
   name: string;
   isSale: boolean;
@@ -31,6 +33,15 @@ export const productAttributeConfig: ICollectionOptions = {
       collection: 'product',
       through: 'product_attribute',
       via: 'attributes'
+    },
+    values: {
+      collection: 'product.attribute.value',
+      via: 'attributeId'
+    },
+    controllers: {
+      collection: 'product.attribute.value',
+      through: 'productAttribute_controller',
+      via: 'attributeId'
     },
     isSale: {
       type: 'boolean',

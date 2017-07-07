@@ -2,6 +2,7 @@ import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 export interface IProductAttributeValueModel {
   name: string;
+  attributeId: string;
 }
 
 export const productAttributeValueConfig: ICollectionOptions = {
@@ -24,14 +25,10 @@ export const productAttributeValueConfig: ICollectionOptions = {
       required: true
     },
     parentId: {
-      type: 'string',
-      title: '父级',
-      description: '父级 id'
+      model: 'product.attribute.value'
     },
     attributeId: {
-      type: 'string',
-      title: '属性',
-      description: '所属属性'
+      model: 'product'
     }
   },
   sync: {

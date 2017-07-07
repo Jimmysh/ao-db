@@ -1,7 +1,14 @@
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
+import { IProductAttributeModel } from './attribute';
+import { IProductCategoryModel } from './category';
+import { IProductServiceModel } from './service';
+
 export interface IProductModel {
   name: string;
+  attributes: string[];
+  categories: string[];
+  services: string[];
 }
 
 export const productModelConfig: ICollectionOptions = {
