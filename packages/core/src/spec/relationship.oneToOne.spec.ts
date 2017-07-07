@@ -25,9 +25,9 @@ test(async t => {
   await customer.remote.update(assign({
     _id: customerData.id,
     _rev: customerData.rev,
-    name: 'aaa'
+    name: 'updateName'
   }));
   await customerView.check(customerData.id);
   const viewUpdateData = await customerView.collection.remote.get(customerData.id);
-  t.deepEqual(viewUpdateData.name, 'aaa');
+  t.deepEqual(viewUpdateData.name, 'updateName');
 });
