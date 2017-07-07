@@ -38,7 +38,9 @@ export interface IBooleanValidation extends IValidation {
   type: 'boolean';
   default?: boolean;
 }
-
+export interface IArrayValidation extends IValidation {
+  type: 'array';
+}
 export interface IAnyValidation extends IValidation {
   type: 'any';
 }
@@ -51,7 +53,7 @@ export interface IFormOption {
   description?: string; // 介绍
 }
 
-export type ITypeValidation = INumberValidation | IStringValidation | IBooleanValidation | IAnyValidation;
+export type ITypeValidation = INumberValidation | IStringValidation | IBooleanValidation | IArrayValidation | IAnyValidation;
 export type IModeConfig = ITypeValidation & IFormOption & IDBOption;
 export type IModel = {
   [name: string]: IModeConfig | IOneToOne | IHasMany

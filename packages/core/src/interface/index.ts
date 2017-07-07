@@ -9,11 +9,9 @@ export interface IAoDBOptions {
 }
 // 默认配置
 export const confDefault = {
-  // 最大保持在线同步 table 数
-  maxLive: 5,
-  // 最大同时同步 table 数
-  maxSync: 8
-}
+  maxLive: 5, // 最大保持在线同步 table 数
+  maxSync: 8  // 最大同时同步 table 数
+};
 
 export interface IUser {
 }
