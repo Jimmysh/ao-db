@@ -8,6 +8,7 @@ export interface IProductServiceModel {
 
 export const productServiceConfig: ICollectionOptions = {
   id: 'product.service',
+  view: true,
   local: {
     name: 'product-service',
     revs_limit: 1,

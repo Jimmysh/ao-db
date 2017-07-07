@@ -1,16 +1,15 @@
 import * as IDBPouch from 'pouchdb-adapter-idb';
 import * as WebSqlPouch from 'pouchdb-adapter-websql';
-import * as models from './models';
 
 import { AoDB, PouchDB } from 'ao-db-core';
 import { DBHelper, DBResultActions, DBTaskActions, IDatabase } from 'ao-db-ngrx';
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { forIn, get, map } from 'lodash';
+import { forIn, get, map, set } from 'lodash';
 
-import { IMLabDBConfig } from './interface';
+import { IAoDBServiceConfig } from './interface';
 import { Store } from '@ngrx/store';
 
-export const MLAB_DB_CONFIG = new InjectionToken<IMLabDBConfig>('MLAB_DB_CONFIG');
+export const AO_DB_SERVICE_CONFIG = new InjectionToken<IAoDBServiceConfig>('AO_DB_SERVICE_CONFIG');
 
 PouchDB
   .plugin(IDBPouch)
@@ -23,13 +22,9 @@ export class AoDBService implements IDatabase {
     store: Store<any>,
     task: DBTaskActions,
     result: DBResultActions,
-    @Inject(MLAB_DB_CONFIG) config: IMLabDBConfig
+    @Inject(AO_DB_SERVICE_CONFIG) config: IAoDBServiceConfig
   ) {
-    const collections = map(models, (v: any) => v.config);
-    this._db = new AoDB({
-      host: config.host,
-      collections
-    });
+    this._db = new AoDB(config);
     const helpConfig = {
       store,
       db: this._db,
@@ -37,9 +32,10 @@ export class AoDBService implements IDatabase {
       result,
       storeName: config.storeName
     };
-    forIn(models, m => {
+
+    forIn(config.collections, m => {
       const id: string = m.config.id;
-      (this as any)[id] = new DBHelper(this._db.collection.get(id), helpConfig);
+      set(this, id, new DBHelper(this._db.collection.get(id), helpConfig));
     });
   }
 

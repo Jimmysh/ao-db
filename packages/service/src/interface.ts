@@ -1,5 +1,5 @@
-export interface IMLabDBConfig {
+import { IAoDBOptions } from 'ao-db-core';
+
+export interface IAoDBServiceConfig extends IAoDBOptions {
   storeName: string;
-  host: string;
-  auth: string;
 }
