@@ -91,7 +91,6 @@ export class Collection<T = any> {
         break;
     }
     this.relationModel = pickBy(config.model!, (v, key) => v.collection || v.model) as any;
-    this._initSync();
   }
 
   // 写入
@@ -229,17 +228,5 @@ export class Collection<T = any> {
     sync.on('denied', error => this._syncSub.next(assign({}, def, { type: 'denied', error })));
     sync.on('complete', data => this._syncSub.next(assign({}, def, { type: 'complete', data })));
     sync.on('error', error => this._syncSub.next(assign({}, def, { type: 'error', error })));
-  }
-
-  // 初始化 sync 配置
-  private _initSync() {
-    const opt: any = get(this.config, 'sync.options');
-    if (!opt) return;
-    this.syncOptions = opt;
-    if (isLiveOptions(opt)) {
-      this.makeNeedLiveSync();
-    } else {
-      this.makeNeedSync();
-    }
   }
 }
