@@ -1,21 +1,20 @@
+import * as product from './product';
+
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
-export interface IItemModel {
+export interface IProductCategoryModel {
   name: string;
-  description: string;
-  keywords: string[];
-  title: string;
 }
 
-export const itemConfig: ICollectionOptions = {
-  id: 'item',
+export const productCategoryConfig: ICollectionOptions = {
+  id: 'product.category',
   local: {
-    name: 'item',
+    name: 'product-category',
     revs_limit: 1,
     auto_compaction: true
   },
   remote: {
-    name: 'item'
+    name: 'product-category'
   },
   model: {
     name: {
@@ -23,21 +22,15 @@ export const itemConfig: ICollectionOptions = {
       required: true,
       minLength: 1
     },
-    keywords: {
-      type: 'array'
+    productId: {
+      collection: 'product',
+      through: 'product_category',
+      via: 'categories'
     },
-    title: {
-      type: 'string',
-      required: true,
-      minLength: 1
-    },
-    description: {
-      type: 'string'
-    },
-    categories: {
-      collection: 'product.category',
+    itemId: {
+      collection: 'item',
       through: 'item_category',
-      via: 'itemtId'
+      via: 'categories'
     }
   },
   sync: {

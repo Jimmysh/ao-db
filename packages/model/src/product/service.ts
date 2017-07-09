@@ -34,6 +34,11 @@ export const productServiceConfig: ICollectionOptions = {
       through: 'product_attribute',
       via: 'services'
     },
+    itemId: {
+      collection: 'item',
+      through: 'item_attribute',
+      via: 'services'
+    },
   },
   sync: {
     type: SyncType.Full,
