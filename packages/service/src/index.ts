@@ -3,4 +3,3 @@
 
 export { AoDBService } from './ao-db-service';
 export { AoDBServiceModule } from './module';
-export * from './models';
