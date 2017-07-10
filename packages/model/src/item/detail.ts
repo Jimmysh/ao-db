@@ -9,6 +9,9 @@ export interface IItemDetail {
 export const itemDetail: ICollectionOptions = {
   id: 'item.detail',
   model: {
+    itemId: {
+      model: 'item'
+    },
     platform: {
       type: 'string'
     },

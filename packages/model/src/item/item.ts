@@ -2,6 +2,7 @@ import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 export interface IItemModel {
   name: string;
+  type: string; // 商品类型 （主要商品，配件，虚拟物品）
   description: string;
   keywords: string[];
   title: string;
@@ -25,6 +26,10 @@ export const itemConfig: ICollectionOptions = {
       type: 'string',
       required: true,
       minLength: 1
+    },
+    details: {
+      collection: 'item.detail',
+      via: 'itemId',
     },
     categories: {
       collection: 'product.category',
