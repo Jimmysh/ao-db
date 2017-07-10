@@ -10,8 +10,6 @@
     "link": "cd ./build && yarn link",
     "lint": "tslint ./src/**/*{!.spec,!.d}.ts"
   },
-  "dependencies": {
-    "ao-db-core": "file:../ao-db-core"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
