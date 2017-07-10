@@ -2,6 +2,11 @@ import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 import { IItemModel } from '../item/item';
 
+// 售卖类型
+export enum SaleType {
+  basic
+}
+
 export interface ISaleModel {
   type: string; // 售卖方式
   template: string; // 售卖模板
