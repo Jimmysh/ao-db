@@ -21,7 +21,7 @@ export class CollectionPlugin {
     forEach(this._colls, (coll, id) => {
       forEach(coll.relationModel, (relationship: IRelationship, attrName) => {
         if (relationship.collection) {
-          const { model, config, id, tableName } = this.getRelationConfig(coll, relationship, attrName)
+          const { model, config, id, tableName } = this.getRelationConfig(coll, relationship, attrName);
           if (model.collection) {
             const relationModel: any = {
               [attrName]: {

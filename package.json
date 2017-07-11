@@ -9,7 +9,7 @@
     "build.3": "lerna run build --scope *server --scope *service",
     "w": "lerna run watch --parallel --scope",
     "b": "lerna run build --parallel --scope",
-    "t": "lerna run test --parallel --scope",
+    "test": "lerna run test --parallel --scope",
     "build": "yarn run build.1 && yarn run build.2 && yarn run build.3",
     "server": "pouchdb-server --host 0.0.0.0 -p 11111 -m"
   },
