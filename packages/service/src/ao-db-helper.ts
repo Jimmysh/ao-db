@@ -16,7 +16,7 @@ PouchDB
   .plugin(WebSqlPouch);
 
 @Injectable()
-export class AoDBService implements IDatabase {
+export class AoDBHelper implements IDatabase {
   private readonly _db: AoDB;
   constructor(
     store: Store<any>,

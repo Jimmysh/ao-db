@@ -1,3 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { AoDBService } from '../../index';
+import { SumService } from './../../index';
+
+describe('SumService', () => {
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        SumService
+      ]
+    });
+  });
+
+  it('should be calculate the sum',
+    inject([SumService],
+      (sumService: SumService) => {
+        sumService.calculate(45, 78, 90, 674);
+        expect(sumService.sum).toEqual(887);
+      })
+  );
+});

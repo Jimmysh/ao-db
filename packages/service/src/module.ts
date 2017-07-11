@@ -1,4 +1,4 @@
-import { AO_DB_SERVICE_CONFIG, AoDBService } from './ao-db-service';
+import { AO_DB_SERVICE_CONFIG, AoDBHelper } from './ao-db-helper';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { AoDBNgrxModule } from 'ao-db-ngrx';
@@ -6,7 +6,7 @@ import { IAoDBServiceConfig } from './interface';
 
 @NgModule({
   imports: [
-    AoDBNgrxModule.forRoot(AoDBService),
+    AoDBNgrxModule.forRoot(AoDBHelper),
   ]
 })
 export class AoDBServiceModule {
@@ -14,7 +14,7 @@ export class AoDBServiceModule {
     return {
       ngModule: AoDBServiceModule,
       providers: [
-        AoDBService,
+        AoDBHelper,
         { provide: AO_DB_SERVICE_CONFIG, useValue: config }
       ]
     };
