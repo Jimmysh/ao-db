@@ -1,13 +1,21 @@
+import { AoDBServiceModule, SumService } from './../../src';
 import { TestBed, inject } from '@angular/core/testing';
 
-import { SumService } from './../../index';
+import { DBReducer } from 'ao-db-ngrx';
+import { StoreModule } from '@ngrx/store';
 
 describe('SumService', () => {
-
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        SumService
+      imports: [
+        AoDBServiceModule.forRoot({
+          host: 'http://127.0.0.1:111',
+          storeName: 'db',
+          collections: []
+        }),
+        StoreModule.provideStore({
+          db: DBReducer,
+        })
       ]
     });
   });

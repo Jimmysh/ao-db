@@ -3,6 +3,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { AoDBNgrxModule } from 'ao-db-ngrx';
 import { IAoDBServiceConfig } from './interface';
+import { SumService } from './sum.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ export class AoDBServiceModule {
       ngModule: AoDBServiceModule,
       providers: [
         AoDBHelper,
+        SumService,
         { provide: AO_DB_SERVICE_CONFIG, useValue: config }
       ]
     };

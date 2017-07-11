@@ -24,19 +24,19 @@ export class AoDBHelper implements IDatabase {
     result: DBResultActions,
     @Inject(AO_DB_SERVICE_CONFIG) config: IAoDBServiceConfig
   ) {
-    this._db = new AoDB(config);
-    const helpConfig = {
-      store,
-      db: this._db,
-      task,
-      result,
-      storeName: config.storeName
-    };
+    // this._db = new AoDB(config);
+    // const helpConfig = {
+    //   store,
+    //   db: this._db,
+    //   task,
+    //   result,
+    //   storeName: config.storeName
+    // };
 
-    forIn(config.collections, m => {
-      const id: string = m.config.id;
-      set(this, id, new DBHelper(this._db.collection.get(id), helpConfig));
-    });
+    // forIn(config.collections, m => {
+    //   const id: string = m.config.id;
+    //   set(this, id, new DBHelper(this._db.collection.get(id), helpConfig));
+    // });
   }
 
   getTable<T>(id: string): DBHelper<T> {
