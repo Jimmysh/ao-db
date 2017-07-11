@@ -30,16 +30,5 @@ export const productAttributeValueConfig: ICollectionOptions = {
     attributeId: {
       model: 'product'
     }
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

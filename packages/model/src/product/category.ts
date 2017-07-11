@@ -32,16 +32,5 @@ export const productCategoryConfig: ICollectionOptions = {
       through: 'item_category',
       via: 'categories'
     }
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

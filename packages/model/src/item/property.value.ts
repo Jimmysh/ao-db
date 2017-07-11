@@ -1,11 +1,11 @@
 import { ICollectionOptions } from 'ao-db-core';
 
-export interface IItemPropertyModel {
+export interface IItemPropertyValueModel {
   propertyId: string; // 所属属性 id
   attributeValueId: string; // 影响的产品所性 id
 }
 
-export const itemPropertyConfig: ICollectionOptions = {
+export const itemPropertyValueConfig: ICollectionOptions = {
   id: 'item.property.value',
   model: {
     propertyId: {

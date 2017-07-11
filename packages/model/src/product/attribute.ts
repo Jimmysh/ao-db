@@ -55,16 +55,5 @@ export const productAttributeConfig: ICollectionOptions = {
       default: false,
       description: '售卖特性会出现在用户定制菜单里'
     }
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

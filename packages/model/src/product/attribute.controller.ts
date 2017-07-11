@@ -25,16 +25,5 @@ export const productAttributeControllerConfig: ICollectionOptions = {
       through: 'productAttribute_controller',
       via: 'controllers'
     },
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

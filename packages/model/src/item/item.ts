@@ -47,17 +47,6 @@ export const itemConfig: ICollectionOptions = {
       via: 'itemId'
     }
   },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
-  },
   local: {
     name: 'item',
     revs_limit: 1,

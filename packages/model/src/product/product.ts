@@ -42,16 +42,5 @@ export const productModelConfig: ICollectionOptions = {
       through: 'product_service',
       via: 'productId'
     }
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

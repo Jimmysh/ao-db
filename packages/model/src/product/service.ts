@@ -39,16 +39,5 @@ export const productServiceConfig: ICollectionOptions = {
       through: 'item_attribute',
       via: 'services'
     },
-  },
-  sync: {
-    type: SyncType.Full,
-    options: {
-      pull: true,
-      selector: {
-        _deleted: {
-          $exists: false
-        }
-      }
-    }
   }
 };

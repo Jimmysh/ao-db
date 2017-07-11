@@ -1,25 +1,32 @@
 {
+  "extends": "./config/tsconfig.flexible",
   "compilerOptions": {
-    "baseUrl": ".",
-    "emitDecoratorMetadata": true,
+    "target": "es2015",
     "experimentalDecorators": true,
-    "strict": true,
-    "module": "commonjs",
+    "outDir": "build/main",
+    "rootDir": "src",
     "moduleResolution": "node",
-    "rootDir": ".",
-    "sourceMap": true,
-    "inlineSources": true,
-    "target": "es5",
-    "skipLibCheck": true,
-    "lib": [
-      "es2015",
-      "dom"
+    "module": "commonjs",
+    "declaration": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "listFiles": false,
+    "traceResolution": false,
+    "pretty": true,
+    "lib": ["es6", "es2015", "dom"],
+    "types": [
+      "node"
     ],
-    "typeRoots": [
-      "./node_modules/@types/"
-    ]
+    "baseUrl": ".",
+    "paths": {
+      "ao-db-model": ["src/index.ts"]
+    }
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules/**"
+  ],
+  "compileOnSave": false
 }

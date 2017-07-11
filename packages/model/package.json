@@ -1,15 +1,81 @@
 {
-  "name": "ao-db-model",
-  "version": "0.0.1",
-  "main": "./bundles/ao-db-model.umd.js",
-  "module": "./modules/ao-db-model.es5.js",
-  "es2015": "./modules/ao-db-model.js",
-  "typings": "./index.d.ts",
+  "name": "ao-db-core",
+  "version": "1.4.0",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "browser": "build/browser/index.js",
   "scripts": {
-    "build": "node ./build.js",
-    "link": "cd ./build && yarn link",
-    "lint": "tslint ./src/**/*{!.spec,!.d}.ts"
+    "info": "npm-scripts-info",
+    "link": "yarn link",
+    "build": "trash build && yarn build:main && yarn build:module && yarn build:browser && yarn build:browser-cjs && yarn build:resolve-sourcemaps",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p config/exports/tsconfig.module.json",
+    "build:browser": "rollup -c config/exports/rollup.config.js -f es -o build/browser/index.js",
+    "build:browser-cjs": "rollup -c config/exports/rollup.config.js -f cjs -o build/browser/index.cjs.js",
+    "build:resolve-sourcemaps": "sorcery -i build/browser/index.js && sorcery -i build/browser/index.cjs.js",
+    "build:tests": "trash test && node config/exports/build-tests.js",
+    "lint": "tslint ./src/**/*{!.spec,!.d}.ts",
+    "unit": "npm run build && yarn build:tests && nyc ava",
+    "check-coverage": "nyc check-coverage --lines 100 --functions 100 --branches 100",
+    "test": "yarn lint && yarn unit && yarn check-coverage",
+    "watch": "npm run build && yarn build:tests -- --no-browser && concurrently -r --kill-others 'npm run --silent build:main -- -w' 'npm run --silent build:tests -- -w --no-browser' 'sleepms 2000 && ava --watch'",
+    "cov": "yarn unit && yarn html-coverage && opn coverage/index.html",
+    "html-coverage": "nyc report --reporter=html",
+    "send-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "docs": "yarn docs:html && opn build/docs/index.html",
+    "docs:html": "typedoc src/index.ts --excludePrivate --mode file --theme minimal --out build/docs",
+    "docs:json": "typedoc --mode file --json build/docs/typedoc.json src/index.ts",
+    "docs:publish": "yarn docs:html && gh-pages -d build/docs",
+    "changelog": "standard-version",
+    "release": "yarn reset && yarn test && yarn docs:publish && yarn changelog",
+    "reset": "git clean -dfx && git reset --hard && yarn",
+    "server": "pouchdb-server --host 0.0.0.0 -p 11111 -m"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "nyc": {
+    "exclude": [
+      "**/spec/**.js",
+      "build/browser/**"
+    ]
+  },
+  "ava": {
+    "files": [
+      "test/**/*.spec.js"
+    ],
+    "source": [
+      "test/**/*.js",
+      "build/**/*.js",
+      "!build/**/spec/**/*.js"
+    ]
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "ava": "^0.20.0",
+    "browserify": "^14.3.0",
+    "codecov": "^2.0.1",
+    "concurrently": "^3.4.0",
+    "cpx": "^1.5.0",
+    "gh-pages": "^1.0.0",
+    "hash.js": "^1.0.3",
+    "mkdirp": "^0.5.1",
+    "npm-scripts-info": "^0.3.6",
+    "nyc": "^11.0.2",
+    "opn-cli": "^3.1.0",
+    "rollup": "^0.43.0",
+    "rollup-plugin-alias": "^1.2.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^4.0.0",
+    "sleep-ms": "^2.0.1",
+    "sorcery": "^0.10.0",
+    "standard-version": "^4.0.0",
+    "trash-cli": "^1.4.0",
+    "tslint": "^5.0.0",
+    "typedoc": "^0.7.1",
+    "typescript": "~2.4.1"
+  }
 }
