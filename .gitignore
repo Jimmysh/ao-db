@@ -19,6 +19,7 @@ build/
 tmp/
 temp/
 $RECYCLE.BIN/
+test/
 
 .DS_Store
 Thumbs.db

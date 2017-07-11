@@ -1,8 +1,7 @@
 import { ICollectionOptions } from 'ao-db-core';
 
 export interface IEnvionmentModel {
-  key: string;
-  value: any;
+  config: any;
 }
 
 export const envionmentConfig: ICollectionOptions = {
@@ -13,10 +12,7 @@ export const envionmentConfig: ICollectionOptions = {
     revs_limit: 1
   },
   model: {
-    key: {
-      type: 'string',
-    },
-    value: {
+    config: {
       type: 'any',
     }
   }
