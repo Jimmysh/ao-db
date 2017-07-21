@@ -1,10 +1,10 @@
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
-export interface SaleRoute {
+export interface PostRoute {
   name: string; // 路径
   path?: string; // 路径
   regExp?: string; // 路径正则表达式
-  saleId: string; // 销售项目 id
+  postId: string; // 文章路径
 }
 
 export const SaleRouterConfig: ICollectionOptions = {

@@ -1,11 +1,23 @@
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
+import { IItemDetail } from './detail';
+
+export enum ItemType {
+  Product, // 产品
+  Accessory, // 配件
+  Card // 虚拟卡
+}
+
 export interface IItemModel {
+  type: ItemType; // 商品类型 （主要商品，配件，虚拟物品）
   name: string;
-  type: string; // 商品类型 （主要商品，配件，虚拟物品）
   description: string;
   keywords: string[];
   title: string;
+  details: IItemDetail[];
+  categories: string[];
+  services: string[];
+  properties: string[];
 }
 
 export const itemConfig: ICollectionOptions = {
