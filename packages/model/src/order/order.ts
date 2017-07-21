@@ -1,4 +1,5 @@
 import { ICollectionOptions } from 'ao-db-core';
+import { now } from 'lodash';
 
 export enum OrderStatus {
   Pending, // 等待中
@@ -47,7 +48,7 @@ export enum Currency {
 
 export interface IOrderModel {
   status: OrderStatus;  // 订单状态
-  orderNo: string; // 订单号
+  orderNo: string; // 订单号  8-20 位，要求数字或字母
 
   subTotal: number; // 原价
   total: number; // 成交价

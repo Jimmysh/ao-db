@@ -1,6 +1,6 @@
 // 用户配置
 
-export interface IOptionModel {
+export interface IUserOptionModel {
   id: string;
   userId: string;
   key: string;
