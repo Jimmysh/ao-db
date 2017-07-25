@@ -7,7 +7,6 @@ import { host } from './global';
 const conf: IAoDBOptions = {
   host,
   collections: [
-    models.envionmentConfig,
     models.elementConfig
   ]
 };

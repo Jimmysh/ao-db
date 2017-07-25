@@ -1,9 +1,6 @@
 // element
 export * from './element/element';
 
-// local
-export * from './local/envionment';
-
 // product
 export * from './product/attribute.controller';
 export * from './product/attribute';
@@ -20,7 +17,6 @@ export * from './item/property';
 export * from './item/property.value';
 export * from './item/property.value.adjustment';
 export * from './item/sku';
-export * from './item/stock';
 
 // resource
 export * from './resource/resource';
