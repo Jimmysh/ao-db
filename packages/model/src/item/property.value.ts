@@ -3,6 +3,7 @@ import { ICollectionOptions } from 'ao-db-core';
 export interface IItemPropertyValueModel {
   propertyId: string; // 所属属性 id
   attributeValueId: string; // 影响的产品所性 id
+  adjustments: any[];// 可选值影响计算
 }
 
 export const itemPropertyValueConfig: ICollectionOptions = {

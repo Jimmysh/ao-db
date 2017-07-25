@@ -8,6 +8,7 @@ export interface IItemPropertyModel {
   controllerId: string; // 控制器 id
   validation: any; // 验证器配置
   values: any[]; // 可选值
+  adjustments: any[]; // 属性影响计算
 }
 
 export const itemPropertyConfig: ICollectionOptions = {
@@ -36,6 +37,11 @@ export const itemPropertyConfig: ICollectionOptions = {
     values: {
       collection: 'item.property.value',
       pk: 'attributeValueId',
+      via: 'propertyId'
+    },
+    adjustments: {
+      collection: 'item.property.adjustment',
+      pk: 'attributeId',
       via: 'propertyId'
     }
   }
