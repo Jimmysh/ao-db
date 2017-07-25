@@ -1,8 +1,9 @@
+import { AdjustmentType } from './property.adjustment';
 import { ICollectionOptions } from 'ao-db-core';
 
 export interface IItemPropertyValueAdjustmentModel {
   propertyValueId: string; // 所属属性 id
-  type: string; // 计算类型
+  type: AdjustmentType; // 计算类型
   value: any; // 计算值, 方法
 }
 
