@@ -22,7 +22,7 @@ export class CollectionPlugin {
       forEach(coll.relationModel, (relationship: IRelationship, attrName) => {
         if (relationship.collection) {
           const { model, config, id, tableName } = this.getRelationConfig(coll, relationship, attrName);
-          if (model.collection) {
+          if (model && model.collection) {
             const relationModel: any = {
               [attrName]: {
                 type: 'string'
@@ -88,15 +88,20 @@ export class CollectionPlugin {
 
   // 找到收集的 model 配置
   getRelationConfig(coll: Collection<any>, relationship: any, attrName: string) {
-    const config = this._colls[relationship.collection].config;
-    const model: any = config.model![relationship.via];
-    let id;
-    let tableName;
-    if (model.collection) {
-      id = `${coll.config.id}.${attrName}`;
-      const id2 = `${config.id}.${relationship.via}`;
-      tableName = 'relation_' + (model.through || sortBy([id, id2]).join('__'));
+    if (this._colls[relationship.collection]) {
+      const config = this._colls[relationship.collection].config;
+      const model: any = config.model![relationship.via];
+      let id;
+      let tableName;
+      if (model.collection) {
+        id = `${coll.config.id}.${attrName}`;
+        const id2 = `${config.id}.${relationship.via}`;
+        tableName = 'relation_' + (model.through || sortBy([id, id2]).join('__'));
+      }
+      return { model, config, id, tableName };
+    } else {
+      console.error('没有找到', relationship.collection, '相关配置');
     }
-    return { model, config, id, tableName };
+    return { model: null, config: null, id: null, tableName: null };
   }
 }
