@@ -31,7 +31,7 @@ export const productServiceConfig: ICollectionOptions = {
     },
     productId: {
       collection: 'product',
-      through: 'product_attribute',
+      through: 'product_service',
       via: 'services'
     },
     itemId: {

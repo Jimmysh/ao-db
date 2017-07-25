@@ -13,6 +13,7 @@ export interface IProductModel {
 
 export const productModelConfig: ICollectionOptions = {
   id: 'product',
+  view: true,
   local: {
     name: 'product',
     revs_limit: 1,
