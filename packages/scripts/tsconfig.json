@@ -1,0 +1,32 @@
+{
+  "extends": "./config/tsconfig.flexible",
+  "compilerOptions": {
+    "target": "es2015",
+    "experimentalDecorators": true,
+    "outDir": "build/main",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "declaration": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "listFiles": false,
+    "traceResolution": false,
+    "pretty": true,
+    "lib": ["es6", "es2015", "dom", "es2015.promise"],
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "ao-db-scripts": ["src/index.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ],
+  "compileOnSave": false
+}
