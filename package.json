@@ -7,11 +7,13 @@
     "build.1": "lerna run build --scope *core && lerna run build --scope *node",
     "build.2": "lerna run build --scope *model",
     "build.3": "lerna run build --scope *server",
-    "w": "lerna run watch --parallel --scope",
-    "b": "lerna run build --parallel --scope",
+    "watch": "lerna run watch --parallel --scope",
+    "build": "lerna run build --parallel --scope",
     "test": "lerna run test --parallel --scope",
-    "build": "yarn run build.1 && yarn run build.2 && yarn run build.3",
-    "server": "pouchdb-server --host 0.0.0.0 -p 11111 -m"
+    "r": "yarn run build.1 && yarn run build.2 && yarn run build.3",
+    "model-server": "pouchdb-server --host 0.0.0.0 -p 11111 -m",
+    "model-mock": "lerna run mock --scope *model",
+    "ms": "concurrently \"yarn model-server\" \"yarn model-mock\""
   },
   "devDependencies": {
     "@angular/common": "4.1.3",
@@ -42,7 +44,7 @@
     "chalk": "^2.0.1",
     "codecov": "^2.0.1",
     "codelyzer": "^3.1.1",
-    "concurrently": "^3.4.0",
+    "concurrently": "^3.5.0",
     "core-js": "^2.4.1",
     "cpx": "^1.5.0",
     "gh-pages": "^1.0.0",

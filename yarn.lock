@@ -1774,7 +1774,7 @@ concordance@^3.0.0:
     semver "^5.3.0"
     well-known-symbols "^1.0.0"
 
-concurrently@^3.4.0:
+concurrently@^3.5.0:
   version "3.5.0"
   resolved "http://registry.npm.taobao.org/concurrently/download/concurrently-3.5.0.tgz#8cf1b7707a6916a78a4ff5b77bb04dec54b379b2"
   dependencies:

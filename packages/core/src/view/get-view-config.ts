@@ -4,13 +4,12 @@ import { ICollectionOptions } from '../interface/index';
 
 export function getViewConfig(config: ICollectionOptions) {
   let backOptions = cloneDeep(config);
-  backOptions.id = backOptions.id + '_view';
+  backOptions.id = `view_${backOptions.id}`;
   if (backOptions.local) {
-    backOptions.local.name = backOptions.local.name + '_view';
+    backOptions.local.name = `view_${backOptions.local.name}`;
   }
   if (backOptions.remote) {
-    backOptions.remote.name = backOptions.remote.name + '_view';
+    backOptions.remote.name = `view_${backOptions.remote.name}`;
   }
-
   return backOptions;
 }
