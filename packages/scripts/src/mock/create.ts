@@ -6,6 +6,7 @@ import { getAuthUrl } from './util';
 import { readJsonSync } from 'fs-extra';
 
 export function createMock(argv: any) {
+  console.log('[ao-db-scripts][mock]', 'createMock');
   const files = readDirFileSync(argv.filder, '.json');
 
   const fdb = _.groupBy(files, (d) => {

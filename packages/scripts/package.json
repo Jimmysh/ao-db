@@ -26,6 +26,9 @@
     "reset": "git clean -dfx && git reset --hard && yarn",
     "server": "pouchdb-server --host 0.0.0.0 -p 11111 -m"
   },
+  "bin": {
+    "ao-db-scripts": "./bin/ao-db-scripts.js"
+  },
   "engines": {
     "node": ">=4"
   },
@@ -46,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.71",
     "@types/node": "^8.0.7",
     "ava": "^0.21.0",
     "browserify": "^14.3.0",
@@ -72,11 +76,11 @@
     "trash-cli": "^1.4.0",
     "tslint": "^5.0.0",
     "typedoc": "^0.7.1",
-    "@types/lodash": "^4.14.71",
     "typescript": "~2.4.1"
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "pouchdb-node": "^6.3.4",
     "yargs": "^8.0.2"
   }
 }

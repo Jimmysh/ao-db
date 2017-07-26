@@ -97,5 +97,7 @@
     "yargs": "^8.0.2",
     "zone.js": "^0.8.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ao-db-scripts": "file:../_local/ao-db-scripts"
+  }
 }

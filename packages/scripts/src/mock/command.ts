@@ -30,7 +30,8 @@ function getConfig(): MockConfig {
     .argv;
 }
 
-export function command(config?: MockConfig) {
+export async function command(config?: MockConfig) {
   const argv = config || getConfig();
-  mock(argv);
+  await mock(argv);
+  console.log('[ao-db-scripts][mock]', '完成');
 }

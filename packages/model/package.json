@@ -31,7 +31,7 @@
     "release": "yarn reset && yarn test && yarn docs:publish && yarn changelog",
     "reset": "git clean -dfx && git reset --hard && yarn",
     "server": "pouchdb-server --host 0.0.0.0 -p 11111 -m",
-    "mock": "node ./scripts/import-mock -- --host 0.0.0.0 -p 11111 -m"
+    "mock": "ao-db-scripts mock -a 0 -s http://0.0.0.0:11111 -f ./mock/basic"
   },
   "engines": {
     "node": ">=4"
