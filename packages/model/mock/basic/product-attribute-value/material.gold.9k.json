@@ -1,0 +1,24 @@
+[{
+  "_id": "gold_9k",
+  "name": "9K 金",
+  "parentId": "gold",
+  "attributeId": "material"
+}, {
+  "_id": "gold_9k_yellow",
+  "name": "9K 黄金",
+  "parentId": "gold_9k",
+  "isLeaf": true,
+  "attributeId": "material"
+}, {
+  "_id": "gold_9k_white",
+  "name": "9K 白金",
+  "parentId": "gold_9k",
+  "isLeaf": true,
+  "attributeId": "material"
+}, {
+  "_id": "gold_9k_red",
+  "name": "9K 玫瑰金",
+  "parentId": "gold_9k",
+  "isLeaf": true,
+  "attributeId": "material"
+}]

@@ -1,0 +1,9 @@
+[{
+  "_id": "sliver",
+  "name": "银"
+}, {
+  "_id": "sliver_925",
+  "name": "925 银",
+  "isLeaf": false,
+  "parentId": "sliver"
+}]

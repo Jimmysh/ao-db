@@ -1,0 +1,6 @@
+{
+  "_id": "ring_size",
+  "name": "尺寸",
+  "isSale": true,
+  "type": "string"
+}

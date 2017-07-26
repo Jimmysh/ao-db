@@ -1,0 +1,7 @@
+{
+  "_id": "material",
+  "name": "材质",
+  "isSale": true,
+  "isSelect": true,
+  "type": "string"
+}

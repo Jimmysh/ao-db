@@ -1,0 +1,24 @@
+[{
+  "_id": "gold_18k",
+  "name": "18K 金",
+  "parentId": "gold",
+  "attributeId": "material"
+}, {
+  "_id": "gold_18k_yellow",
+  "name": "18K 黄金",
+  "parentId": "gold_18k",
+  "isLeaf": true,
+  "attributeId": "material"
+}, {
+  "_id": "gold_18k_white",
+  "name": "18K 白金",
+  "parentId": "gold_18k",
+  "isLeaf": true,
+  "attributeId": "material"
+}, {
+  "_id": "gold_18k_red",
+  "name": "18K 玫瑰金",
+  "parentId": "gold_18k",
+  "isLeaf": true,
+  "attributeId": "material"
+}]

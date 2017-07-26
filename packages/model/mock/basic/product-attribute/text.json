@@ -1,0 +1,6 @@
+{
+  "_id": "text",
+  "name": "定制文字",
+  "isSale": true,
+  "type": "number"
+}
