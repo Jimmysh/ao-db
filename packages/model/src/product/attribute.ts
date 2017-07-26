@@ -4,10 +4,11 @@ import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 import { IProductAttributeValueModel } from './attribute.value';
 
+// 产品特性
 export interface IProductAttributeModel {
-  name: string;
-  isSale: boolean;
-  isSelect: boolean;
+  name: string; // 名字
+  isSale: boolean; // 销售属性
+  isSelect: boolean; // 是否可选属性
 }
 
 export const productAttributeConfig: ICollectionOptions = {

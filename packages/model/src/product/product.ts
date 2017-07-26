@@ -4,11 +4,12 @@ import { IProductAttributeModel } from './attribute';
 import { IProductCategoryModel } from './category';
 import { IProductServiceModel } from './service';
 
+// 对一个产品的广义上的定义
 export interface IProductModel {
-  name: string;
-  attributes: string[];
-  categories: string[];
-  services: string[];
+  name: string; // 产品名字
+  attributes: string[]; // 特性
+  categories: string[]; // 分类
+  services: string[]; // 服务
 }
 
 export const productModelConfig: ICollectionOptions = {

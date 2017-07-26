@@ -1,7 +1,8 @@
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
+// 产品特性控制器
 export interface IProductAttributeControllerModel {
-  name: string;
+  name: string; // 名字
 }
 
 export const productAttributeControllerConfig: ICollectionOptions = {

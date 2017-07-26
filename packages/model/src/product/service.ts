@@ -3,8 +3,8 @@ import * as product from './product';
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
 export interface IProductServiceModel {
-  name: string;
-  description: string;
+  name: string; // 名字
+  description: string; // 服务介绍
 }
 
 export const productServiceConfig: ICollectionOptions = {

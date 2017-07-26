@@ -1,8 +1,11 @@
 import { ICollectionOptions, SyncType } from 'ao-db-core';
 
+// 属性可选值
 export interface IProductAttributeValueModel {
-  name: string;
-  attributeId: string;
+  name: string; // 可选值名字
+  attributeId: string; // 可选值 id
+  parentId: string; // 父级
+  isLeaf: boolean; // 是否是叶子可选值
 }
 
 export const productAttributeValueConfig: ICollectionOptions = {
