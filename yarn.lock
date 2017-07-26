@@ -4367,6 +4367,10 @@ jstransform@~3.0.0:
     esprima-fb "~3001.1.0-dev-harmony-fb"
     source-map "0.1.31"
 
+junk@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/junk/download/junk-2.1.0.tgz#f431b4b7f072dc500a5f10ce7f4ec71930e70134"
+
 karma-chrome-launcher@^2.1.1:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/karma-chrome-launcher/download/karma-chrome-launcher-2.2.0.tgz#cf1b9d07136cc18fe239327d24654c3dbc368acf"
@@ -6108,7 +6112,7 @@ pouchdb-promise@5.4.0:
   dependencies:
     lie "3.0.4"
 
-pouchdb-promise@5.4.3:
+pouchdb-promise@5.4.3, pouchdb-promise@^5.4.0, pouchdb-promise@^5.4.3:
   version "5.4.3"
   resolved "http://registry.npm.taobao.org/pouchdb-promise/download/pouchdb-promise-5.4.3.tgz#331d670b1989d5a03f268811214f27f54150cb2b"
   dependencies:
@@ -6126,12 +6130,6 @@ pouchdb-promise@^0.0.0:
   dependencies:
     bluebird "~1.2.4"
     lie "~2.7.4"
-
-pouchdb-promise@^5.4.0, pouchdb-promise@^5.4.3:
-  version "5.4.5"
-  resolved "http://registry.npm.taobao.org/pouchdb-promise/download/pouchdb-promise-5.4.5.tgz#5c2a69759141eb73be1e172e522fd84da2e0752e"
-  dependencies:
-    lie "3.0.4"
 
 pouchdb-replication@^6.1.0, pouchdb-replication@^6.2.0:
   version "6.3.4"

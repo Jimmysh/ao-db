@@ -72,10 +72,10 @@
     "trash-cli": "^1.4.0",
     "tslint": "^5.0.0",
     "typedoc": "^0.7.1",
+    "@types/lodash": "^4.14.71",
     "typescript": "~2.4.1"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.71",
     "lodash": "^4.17.4",
     "yargs": "^8.0.2"
   }

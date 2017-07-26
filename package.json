@@ -49,6 +49,7 @@
     "hash.js": "^1.0.3",
     "immutable": "4.0.0-rc.2",
     "jasmine-core": "^2.6.4",
+    "junk": "^2.1.0",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
     "karma-jasmine": "^1.1.0",
