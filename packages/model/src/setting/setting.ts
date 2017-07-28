@@ -1,6 +1,6 @@
 // 配置
 
-export interface IOptionModel {
+export interface ISettingModel {
   id: string;
   name: string;
   value: string;
