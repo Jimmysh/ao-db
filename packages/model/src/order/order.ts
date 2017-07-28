@@ -48,26 +48,25 @@ export enum Currency {
 
 export interface IOrderModel {
   status: OrderStatus;  // 订单状态
-  orderNo: string; // 订单号  8-20 位，要求数字或字母
+  orderNo: string; // 订单号 - 8-20 位，要求数字或字母
 
-  subTotal: number; // 原价
-  total: number; // 成交价
-  currency: Currency;  // 货币
+  // 订购的商品
+  items: any[];
+
+  subTotal: number; // 原价 - 所有 item subTotal 和
+  total: number; // 成交价 - 所有 item total 和
+  currency: Currency;  // 价格对应的货币
 
   customer: any; // 用户
   address: any; // 配送地址
-  phone: number; // 电话
+  phone: number; // 配送电话
 
   subject: string; // 订单标题
   body: string; // 订单信息
-  description; // 订单附加说明
 
   paymentStatus: PaymentStatus; // 支付状态
   paymentMethod: PaymentMethod; // 支付途径
   transactionNo: string;  // 渠道流水号
-
-  // 订购的产品
-  item: any;
 
   createAt: number; // 创建时间
   expireAt: number; // 订单过期时间
