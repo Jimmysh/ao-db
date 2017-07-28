@@ -25,7 +25,7 @@ export const itemPicture: ICollectionOptions = {
     isShow: {
       type: 'boolean'
     },
-    displayOrder: {
+    order: {
       type: 'number',
       default: 0
     }
