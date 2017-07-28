@@ -1,6 +1,4 @@
 {
   "_id": "price",
-  "name": "价格",
-  "isSale": false,
-  "type": "number"
+  "name": "价格"
 }

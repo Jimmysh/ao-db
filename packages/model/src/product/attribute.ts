@@ -7,8 +7,6 @@ import { IProductAttributeValueModel } from './attribute.value';
 // 产品特性
 export interface IProductAttributeModel {
   name: string; // 名字
-  isSale: boolean; // 销售属性
-  isSelect: boolean; // 是否可选属性
 }
 
 export const productAttributeConfig: ICollectionOptions = {
@@ -43,18 +41,6 @@ export const productAttributeConfig: ICollectionOptions = {
       collection: 'product.attribute.value',
       through: 'productAttribute_controller',
       via: 'attributeId'
-    },
-    isSale: {
-      type: 'boolean',
-      title: '是否sku',
-      default: false,
-      description: 'sku'
-    },
-    isSelect: {
-      type: 'boolean',
-      title: '是否可选',
-      default: false,
-      description: '售卖特性会出现在用户定制菜单里'
     }
   }
 };
