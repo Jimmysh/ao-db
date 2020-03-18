@@ -53,7 +53,7 @@
     "@types/node": "^8.0.7",
     "ava": "^0.21.0",
     "browserify": "^14.3.0",
-    "codecov": "^2.0.1",
+    "codecov": "^3.6.5",
     "concurrently": "^3.4.0",
     "cpx": "^1.5.0",
     "gh-pages": "^1.0.0",
